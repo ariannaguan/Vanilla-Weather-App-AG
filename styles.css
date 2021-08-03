@@ -1,0 +1,105 @@
+body {
+  background-color: #fcfefe;
+  font-family: "Montserrat", sans-serif;
+}
+
+.weather-app {
+  border: 5px solid #d0dbdb;
+  border-radius: 10px;
+  color: #54acac;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 10px;
+}
+
+.search-form {
+  border: 2px solid #db95a5;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.search-button,
+.current-button {
+  background-color: transparent;
+  border: 2px solid #db95a5;
+  border-radius: 20px;
+  color: #54acac;
+  display: block;
+  margin: 0 auto;
+}
+
+.search-button:hover,
+.current-button:hover {
+  background-color: #db95a5;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: #f6fafa;
+  display: block;
+  margin: 0 auto;
+  transition: 200ms ease-in-out;
+}
+
+.city {
+  font-size: 30px;
+  text-align: center;
+}
+
+.temperature-today {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.icon-today {
+  color: #b8c0c0;
+  display: block;
+  font-size: 40px;
+  margin: 0 auto;
+}
+
+.weather-today {
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+hr {
+  background-color: #db95a5;
+  border: 2px solid #db95a5;
+}
+
+.col-3 {
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.col-3:hover {
+  font-size: 20px;
+  transition: 200ms ease-in-out;
+}
+
+.icon-future {
+  color: #b8c0c0;
+}
+
+.coder {
+  color: #54acac;
+  text-align: center;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+a {
+  color: #b8c0c0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #db95a5;
+  transition: 200ms ease-in-out;
+}

@@ -23,29 +23,26 @@
       <div class="weather-app">
         <form>
           <div class="row">
-            <div class="col-6">
+            <div class="col-8">
               <input
                 type="search"
-                placeholder="Enter a city..."
+                placeholder=" Enter a city..."
                 autofocus="on"
                 autocomplete="off"
+                class="search-form"
               />
             </div>
-            <div class="col-3">
-              <input type="submit" value="Search" />
+            <div class="col-2">
+              <input type="submit" value="Search" class="search-button" />
             </div>
-            <div class="col-3">
-              <input type="button" value="Current" />
+            <div class="col-2">
+              <input type="button" value="Current" class="current-button" />
             </div>
           </div>
           <br />
+
           <div class="row">
-            <div class="col-3">
-              <i class="fas fa-cloud-sun"></i>
-              <span>32°C</span>
-              <div>Mostly Cloudy</div>
-            </div>
-            <div class="col-6">
+            <div class="col city">
               <div>Perth, AU</div>
               <div>
                 <span>Tuesday</span>
@@ -54,47 +51,55 @@
                 <span>47</span>
               </div>
             </div>
-            <div class="col-3">
+            <div class="row">
+
+            <div class="col-6 temperature-today">
+              <i class="fas fa-cloud-sun icon-today"></i>
+              <div>32°C</div>
+              <div>Mostly Cloudy</div>
+            </div>
+
+            <div class="col-6 weather-today">
               <div>Humidity: 67%</div>
               <div>Wind: 10km/h</div>
             </div>
           </div>
-          <br />
+
           <hr />
-          <br />
+          
+
           <div class="row">
             <div class="col-3">
               <div>Wed</div>
-              <i class="fas fa-cloud-showers-heavy"></i>
+              <i class="fas fa-cloud-showers-heavy icon-future"></i>
               <div>31° | 27°</div>
             </div>
             <div class="col-3">
               <div>Thu</div>
-              <i class="fas fa-cloud-sun"></i>
+              <i class="fas fa-cloud-sun icon-future"></i>
               <div>32° | 27°</div>
             </div>
             <div class="col-3">
               <div>Fri</div>
-              <i class="fas fa-cloud-sun"></i>
+              <i class="fas fa-cloud-sun icon-future"></i>
               <div>31° | 27°</div>
             </div>
             <div class="col-3">
               <div>Sat</div>
-              <i class="fas fa-cloud-showers-heavy"></i>
+              <i class="fas fa-cloud-showers-heavy icon-future"></i>
               <div>31° | 27°</div>
             </div>
           </div>
         </form>
       </div>
-      <br />
-
-      <a
-        href="https://github.com/ariannaguan/Vanilla-Weather-App-AG"
-        target="_blank"
-        >Open-source code</a
-      >
-      by Arianna Guan
     </div>
-  </body>
+    <div class="coder">
+    <a
+    href="https://github.com/ariannaguan/Vanilla-Weather-App-AG"
+    target="_blank"
+    >Open-source code</a>
+    <span >by Arianna Guan </span>
+    </div>
+</body>
   <script src="script.js"></script>
 </html>
