@@ -48,7 +48,7 @@ body {
 }
 
 .temperature-today {
-  font-size: 23px;
+  font-size: 55px;
   text-transform: capitalize;
   margin-top: 30px;
   margin-bottom: 20px;
@@ -61,8 +61,8 @@ body {
 
 .units {
   position: relative;
-  font-size: 13px;
-  top: -8px;
+  font-size: 15px;
+  top: -30px;
 }
 
 .units::selection {
@@ -73,7 +73,7 @@ body {
   color: #b8c0c0;
   display: block;
   font-size: 60px;
-  margin: 0 auto;
+  margin: -25px auto;
 }
 
 .weather-today {
@@ -81,6 +81,7 @@ body {
   margin-top: 35px;
   margin-bottom: 20px;
   text-align: center;
+  text-transform: capitalize;
 }
 
 hr {
