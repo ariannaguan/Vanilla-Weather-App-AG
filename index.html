@@ -14,7 +14,7 @@
       src="https://kit.fontawesome.com/6413657402.js"
       crossorigin="anonymous"
     ></script>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Vanilla Weather App - AG</title>
   </head>
@@ -43,19 +43,19 @@
 
           <div class="row">
             <div class="col city">
-              <div>Perth, AU</div>
-              <div>
-                <span>Tuesday</span>
-                <span>14</span>
+              <span id="city"></span>, <span id ="country"></span>
+              <div id = "day-time">
+                <span class = "day" id = "day"></span>
+                <span id="hour"></span>
                 <span>:</span>
-                <span>47</span>
+                <span id="minute"></span>
               </div>
             </div>
             <div class="row">
 
             <div class="col-4 temperature-today">
-              <div>32°C</div>
-              <div>Mostly Cloudy</div>
+              <span id="temperature-today"></span><span class="units"><a href="#">  °C</a> <span class ="divider">|</span> <a href ="#"> °F</a></span>
+              <div id="description"></div>
             </div>
 
             <div class="col-4 weather-today">
@@ -64,8 +64,8 @@
             </div>
 
             <div class="col-4 weather-today">
-              <div>Humidity: 67%</div>
-              <div>Wind: 10km/h</div>
+              <div>Humidity: <span id ="humidity" class ="humidity"></span><span> %</span></div>
+              <div>Wind: <span id ="wind" class ="wind"> </span><span> km/h</span></div>
             </div>
           </div>
 
