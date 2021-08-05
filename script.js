@@ -28,8 +28,11 @@ function formatDate(now) {
 let dateElement = document.querySelector("#day-time");
 let now = new Date();
 dateElement.innerHTML = formatDate(now);
+
 // Weather
 function displayTemperature(response) {
+  celciusTemperaure = Math.round(response.data.main.temp);
+
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
 
@@ -37,7 +40,7 @@ function displayTemperature(response) {
   countryElement.innerHTML = response.data.sys.country;
 
   let temperatureElement = document.querySelector("#temperature-today");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(celciusTemperaure);
 
   let discriptionElement = document.querySelector("#description");
   discriptionElement.innerHTML = response.data.weather[0].description;
@@ -71,5 +74,27 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+// Unit conversion
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature-today");
+  let fahrenheitTemperature = Math.round((celciusTemperaure * 9) / 5 + 32);
+  temperatureElement.innerHTML = fahrenheitTemperature;
+}
+
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature-today");
+  temperatureElement.innerHTML = celciusTemperaure;
+}
+
+let celciusTemperaure = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", displayCelciusTemperature);
 
 search("perth");

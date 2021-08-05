@@ -66,10 +66,6 @@ body {
   top: -30px;
 }
 
-.units::selection {
-  font-weight: bold;
-}
-
 .icon-today {
   color: #b8c0c0;
   display: block;
@@ -110,7 +106,7 @@ hr {
 .coder {
   color: #54acac;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   text-decoration: none;
 }
 
@@ -122,4 +118,9 @@ a {
 a:hover {
   color: #db95a5;
   transition: 200ms ease-in-out;
+}
+
+a:focus {
+  color: #db95a5;
+  font-weight: bold;
 }
