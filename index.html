@@ -21,7 +21,7 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <form>
+        <form id="search-form">
           <div class="row">
             <div class="col-8">
               <input
@@ -29,16 +29,19 @@
                 placeholder=" Enter a city..."
                 autofocus="on"
                 autocomplete="off"
-                class="search-form"
+                class="city-input"
+                id="city-input"
               />
             </div>
             <div class="col-2">
               <input type="submit" value="Search" class="search-button" />
             </div>
+          </form>
             <div class="col-2">
               <input type="button" value="Current" class="current-button" />
             </div>
           </div>
+        
           <br />
 
           <div class="row">
@@ -99,7 +102,7 @@
               <div>31° | 27°</div>
             </div>
           </div>
-        </form>
+        
       </div>
     </div>
     <div class="coder">

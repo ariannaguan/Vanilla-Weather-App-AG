@@ -1,3 +1,4 @@
+// Day & Time
 function formatDate(now) {
   let dayIndex = now.getDay();
   let days = [
@@ -24,9 +25,11 @@ function formatDate(now) {
   return `${day}  ${hour} : ${minute}`;
 }
 
+let dateElement = document.querySelector("#day-time");
+let now = new Date();
+dateElement.innerHTML = formatDate(now);
+// Weather
 function displayTemperature(response) {
-  console.log(response.data);
-
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
 
@@ -53,12 +56,20 @@ function displayTemperature(response) {
   iconTodayElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let dateElement = document.querySelector("#day-time");
-let now = new Date();
-dateElement.innerHTML = formatDate(now);
+// Search engine
+function search(city) {
+  let apiKey = "63e5d82d6246e7e494e19e9c5b4326e5";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-let apiKey = "63e5d82d6246e7e494e19e9c5b4326e5";
-let city = "perth";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input").value;
+  search(cityInputElement);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("perth");

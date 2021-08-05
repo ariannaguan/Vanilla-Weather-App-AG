@@ -12,8 +12,8 @@ body {
   padding: 10px;
 }
 
-.search-form {
-  background-color: tr;
+.city-input {
+  background-color: transparent;
   border: 2px solid #db95a5;
   border-radius: 20px;
   display: block;
@@ -60,6 +60,7 @@ body {
 }
 
 .units {
+  color: #bdc9c9;
   position: relative;
   font-size: 15px;
   top: -30px;
@@ -97,6 +98,7 @@ hr {
 }
 
 .col-3:hover {
+  color: #db95a5;
   font-size: 25px;
   transition: 200ms ease-in-out;
 }
