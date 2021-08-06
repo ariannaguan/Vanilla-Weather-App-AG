@@ -92,9 +92,9 @@ hr {
   text-align: center;
 }
 
-.col-2:hover {
+.weather-forecast-day:hover {
   color: #db95a5;
-  font-size: 25px;
+  font-size: 22px;
   transition: 200ms ease-in-out;
 }
 
