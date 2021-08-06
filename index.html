@@ -23,7 +23,7 @@
       <div class="weather-app">
         <form id="search-form">
           <div class="row">
-            <div class="col-8">
+            <div class="col-10">
               <input
                 type="search"
                 placeholder=" Enter a city..."
@@ -37,9 +37,6 @@
               <input type="submit" value="Search" class="search-button" />
             </div>
           </form>
-            <div class="col-2">
-              <input type="button" value="Current" class="current-button" />
-            </div>
           </div>
         
           <br />
@@ -57,7 +54,7 @@
             <div class="row">
 
             <div class="col-4 temperature-today">
-              <span id="temperature-today"></span><span class="units"><a href="#" id = "celcius-link"> °C</a> <span class ="divider">|</span> <a href ="#" id = "fahrenheit-link"> °F</a></span>
+              <span id="temperature-today"></span><span class="celcius"> °C </span>
             </div>
 
             <div class="col-4 weather-today" >
@@ -70,7 +67,7 @@
             <div id="description"></div>
             </div>
 
-            <div class="col-4 weather-today">
+            <div class="col-4 details-today">
               <div>Humidity: <span id ="humidity" class ="humidity"></span><span> %</span></div>
               <div>Wind: <span id ="wind" class ="wind"> </span><span> km/h</span></div>
             </div>

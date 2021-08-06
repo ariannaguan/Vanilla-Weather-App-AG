@@ -43,7 +43,7 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index > 0 && index < 7) {
       forecastHTML =
         forecastHTML +
         `
@@ -56,10 +56,12 @@ function displayForecast(response) {
     alt=""
     />              
     <div class="weather-forecast-temperatures>
-    <span class="max-temp">${Math.round(forecastDay.temp.max)}</
+    <span class="max-temp"><strong>${Math.round(
+      forecastDay.temp.max
+    )}</strong></
     span>
      | 
-    <span class="min-temp">${Math.round(forecastDay.temp.min)}°</
+    <span >${Math.round(forecastDay.temp.min)}°</
     span>
     </div>
   </div>
@@ -71,10 +73,8 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "63e5d82d6246e7e494e19e9c5b4326e5";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -123,26 +123,5 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-today");
-  let fahrenheitTemperature = Math.round((celciusTemperaure * 9) / 5 + 32);
-  temperatureElement.innerHTML = fahrenheitTemperature;
-}
-
-function displayCelciusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-today");
-  temperatureElement.innerHTML = celciusTemperaure;
-}
-
-let celciusTemperaure = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", displayCelciusTemperature);
 
 search("perth");

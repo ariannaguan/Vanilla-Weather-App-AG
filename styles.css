@@ -21,8 +21,7 @@ body {
   width: 100%;
 }
 
-.search-button,
-.current-button {
+.search-button {
   background-color: transparent;
   border: 2px solid #db95a5;
   border-radius: 20px;
@@ -31,8 +30,7 @@ body {
   margin: 0 auto;
 }
 
-.search-button:hover,
-.current-button:hover {
+.search-button:hover {
   background-color: #db95a5;
   border: 2px solid transparent;
   border-radius: 20px;
@@ -55,15 +53,11 @@ body {
   text-align: center;
 }
 
-.divider {
-  color: #b8c0c0;
-}
-
-.units {
-  color: #bdc9c9;
+.celcius {
+  color: #db95a5;
   position: relative;
-  font-size: 15px;
-  top: -30px;
+  font-size: 20px;
+  top: -25px;
 }
 
 .icon-today {
@@ -80,6 +74,13 @@ body {
   text-transform: capitalize;
 }
 
+.details-today {
+  font-size: 20px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 hr {
   background-color: #db95a5;
   border: 2px solid #db95a5;
@@ -94,12 +95,8 @@ hr {
 
 .weather-forecast-day:hover {
   color: #db95a5;
-  font-size: 22px;
+  font-size: 24px;
   transition: 200ms ease-in-out;
-}
-
-.max-temp {
-  font-weight: bold;
 }
 
 .coder {
