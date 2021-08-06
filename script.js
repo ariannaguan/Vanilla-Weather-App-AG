@@ -29,6 +29,37 @@ let dateElement = document.querySelector("#day-time");
 let now = new Date();
 dateElement.innerHTML = formatDate(now);
 
+// Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = [`Sat`, `Sun`, `Mon`, `Tue`, `Wed`, `Thu`];
+  
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+<div class="col-2">
+  <div class = "weather-forecast-day">${day}</div>
+    <img 
+    src="#" 
+    alt=""
+    />              
+    <div class="weather-forecast-temperatures>
+    <span class="max-temp">31°</
+    span>
+     | 
+    <span class="min-temp">27°</
+    span>
+    </div>
+  </div>
+`;
+  });
+  forecastHTML = forecastHTML + `</div`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 // Weather
 function displayTemperature(response) {
   celciusTemperaure = Math.round(response.data.main.temp);
@@ -98,3 +129,4 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 
 search("perth");
+displayForecast();

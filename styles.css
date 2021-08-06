@@ -67,7 +67,6 @@ body {
 }
 
 .icon-today {
-  color: #b8c0c0;
   display: block;
   font-size: 60px;
   margin: -25px auto;
@@ -86,21 +85,21 @@ hr {
   border: 2px solid #db95a5;
 }
 
-.col-3 {
-  font-size: 15px;
+.weather-forecast {
+  font-size: 18px;
   margin-top: 15px;
   margin-bottom: 15px;
   text-align: center;
 }
 
-.col-3:hover {
+.col-2:hover {
   color: #db95a5;
   font-size: 25px;
   transition: 200ms ease-in-out;
 }
 
-.icon-future {
-  color: #b8c0c0;
+.max-temp {
+  font-weight: bold;
 }
 
 .coder {
